@@ -2,9 +2,9 @@
 This is a POC project to setup graphQL with Golang.
 
 ## Packages used
-github.com/gin-gonic/gin
-github.com/graphql-go/graphql
-https://www.npmjs.com/package/graphql-playground-react
+- github.com/gin-gonic/gin
+- github.com/graphql-go/graphql
+- https://www.npmjs.com/package/graphql-playground-react
 
 ## Runing the project
 - Run command `go run server.go` from the root project directory.
