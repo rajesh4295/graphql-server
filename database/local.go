@@ -36,6 +36,20 @@ func GetUserById(id string) (*models.User, error) {
 	return &models.User{}, errors.New("user not found")
 }
 
+func UpdateUserById(user *models.User) (*models.User, error) {
+	existingUser, err := GetUserById(user.Id)
+	if err != nil {
+		return nil, err
+	}
+	if user.Name != "" {
+		existingUser.Name = user.Name
+	}
+	if user.WalletId != "" {
+		existingUser.WalletId = user.WalletId
+	}
+	return existingUser, nil
+}
+
 func AddUser(user *models.User) (*models.User, error) {
 	userData = append(userData, user)
 	return user, nil
